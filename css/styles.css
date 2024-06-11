@@ -4,6 +4,11 @@
   font-family: Arial, sans-serif;
 }
 
+@font-face {
+    font-family: 'HARRYP';
+    src: url(../assets/font/HARRYP__.TTF);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -14,6 +19,11 @@ header {
   background-color: #343a40;
   color: white;
   padding: 1em 0;
+}
+
+h1, h2 {
+    font-family: 'HARRYP';
+    font-size: 80px;
 }
 
 nav ul {
@@ -30,6 +40,8 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-family: 'HARRYP';
+  font-size: 40px;
 }
 
 main {
@@ -43,16 +55,25 @@ main {
 }
 
 p {
-  font-size: 15px;
+  font-size: 18px;
 }
 
-.grid {
+.grid, 
+.personajes, 
+.hechizos, 
+.Gryffindor, 
+.Slytherin, 
+.Hufflepuff, 
+.Ravenclaw,
+.Hogwarts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     padding: 40px;
     margin-bottom: 10px;
+    font-family: 'HARRYP';
  }
+
  
  .card {
     background-color: #343a40;
@@ -76,8 +97,12 @@ p {
  }
  
  .card-content h4 {
-    font-size: 15px;
+    font-size: 20px;
     margin: 0;
+ }
+
+ul {
+    list-style: none;
  }
 
 footer {

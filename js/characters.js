@@ -7,8 +7,6 @@ fetch("https://hp-api.onrender.com/api/characters")
   })
 
   .then((data) => {
-    const data2 = data.slice(0, 2);
-
     data.forEach((e) => {
       const card = document.createElement("div");
       card.classList.add("card");
@@ -35,7 +33,11 @@ fetch("https://hp-api.onrender.com/api/characters")
           e.dateOfBirth !== null ? e.dateOfBirth : "No Data"
         }</p>
         <p><strong>Alive:</strong> ${e.alive === true ? "Alive" : "Dead"}</p>
-        <p><strong>Age:</strong> ${(e.alive === true && e.dateOfBirth !== null) ? calculateAge(e.dateOfBirth) :  " -"}
+        <p><strong>Age:</strong> ${
+          e.alive === true && e.dateOfBirth !== null
+            ? calculateAge(e.dateOfBirth)
+            : " -"
+        }
 
     `;
 

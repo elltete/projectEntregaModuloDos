@@ -1,7 +1,6 @@
-
 // endpoint | Personajes (characters)
 
-const $personajes = document.getElementById("personajes");
+const $personajes = document.querySelector(".personajes");
 
 fetch("https://hp-api.onrender.com/api/characters")
   .then((resp) => {
@@ -10,20 +9,25 @@ fetch("https://hp-api.onrender.com/api/characters")
   })
 
   .then((data) => {
-    const data5 = data.slice(0,5);
+    const data6 = data.slice(0, 6);
 
-    data5.forEach((e) => {
-        $personajes.innerHTML += `
-        <div class="card">
-        <img src="${e.image}">
+    data6.forEach((e) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      card.innerHTML += `
+        <div class="card-content">
+            <img src="${e.image}">
         </div>
         `;
+
+      $personajes.appendChild(card);
     });
   });
 
-  // endpoint | hechizos (spells)
-  
-  const $hechizos = document.getElementById("hechizos");
+// endpoint | hechizos (spells)
+
+const $hechizos = document.querySelector(".hechizos");
 
 fetch("https://hp-api.onrender.com/api/spells")
   .then((resp) => {
@@ -32,10 +36,10 @@ fetch("https://hp-api.onrender.com/api/spells")
   })
 
   .then((data) => {
-    const data5 = data.slice(0,5);
+    const data15 = data.slice(0, 15);
 
-    data5.forEach((e) => {
-        $hechizos.innerHTML += `
+    data15.forEach((e) => {
+      $hechizos.innerHTML += `
         <ul>
           <li><strong>Mame:</strong> ${e.name}</li>
           <li><strong>Description:</strong> ${e.description}</li>
@@ -44,9 +48,9 @@ fetch("https://hp-api.onrender.com/api/spells")
     });
   });
 
-  // endpoint | personajes de Gryffindor house
+// endpoint | personajes de Gryffindor house
 
-const $gryffindor = document.getElementById("Gryffindor");
+const $gryffindor = document.querySelector(".Gryffindor");
 
 fetch("https://hp-api.onrender.com/api/characters/house/Gryffindor")
   .then((resp) => {
@@ -55,20 +59,25 @@ fetch("https://hp-api.onrender.com/api/characters/house/Gryffindor")
   })
 
   .then((data) => {
-    const data3 = data.slice(0,3);
+    const data3 = data.slice(0, 3);
 
     data3.forEach((e) => {
-        $gryffindor.innerHTML += `
-        <div class="card">
-        <img src="${e.image}">
-        </div>
-        `;
+        const card = document.createElement("div");
+        card.classList.add("card");
+  
+        card.innerHTML += `
+          <div class="card-content">
+              <img src="${e.image}">
+          </div>
+          `;
+  
+        $gryffindor.appendChild(card);
+      });
     });
-  });
 
-    // endpoint | personajes de Slytherin house
+// endpoint | personajes de Slytherin house
 
-const $slytherin = document.getElementById("Slytherin");
+const $slytherin = document.querySelector(".Slytherin");
 
 fetch("https://hp-api.onrender.com/api/characters/house/Slytherin")
   .then((resp) => {
@@ -77,20 +86,25 @@ fetch("https://hp-api.onrender.com/api/characters/house/Slytherin")
   })
 
   .then((data) => {
-    const data3 = data.slice(0,3);
+    const data3 = data.slice(0, 3);
 
     data3.forEach((e) => {
-        $slytherin.innerHTML += `
-        <div class="card">
-        <img src="${e.image}">
-        </div>
-        `;
+        const card = document.createElement("div");
+        card.classList.add("card");
+  
+        card.innerHTML += `
+          <div class="card-content">
+              <img src="${e.image}">
+          </div>
+          `;
+  
+        $slytherin.appendChild(card);
+      });
     });
-  });
 
-      // endpoint | personajes de Hufflepuff house
+// endpoint | personajes de Hufflepuff house
 
-const $hufflepuff = document.getElementById("Hufflepuff");
+const $hufflepuff = document.querySelector(".Hufflepuff");
 
 fetch("https://hp-api.onrender.com/api/characters/house/Hufflepuff")
   .then((resp) => {
@@ -99,20 +113,25 @@ fetch("https://hp-api.onrender.com/api/characters/house/Hufflepuff")
   })
 
   .then((data) => {
-    const data1 = data.slice(0,1);
+    const data1 = data.slice(0, 1);
 
     data1.forEach((e) => {
-        $hufflepuff.innerHTML += `
-        <div class="card">
-        <img src="${e.image}">
-        </div>
-        `;
+        const card = document.createElement("div");
+        card.classList.add("card");
+  
+        card.innerHTML += `
+          <div class="card-content">
+              <img src="${e.image}">
+          </div>
+          `;
+  
+        $hufflepuff.appendChild(card);
+      });
     });
-  });
 
-        // endpoint | personajes de Ravenclaw house
+// endpoint | personajes de Ravenclaw house
 
-const $ravenclaw = document.getElementById("Ravenclaw");
+const $ravenclaw = document.querySelector(".Ravenclaw");
 
 fetch("https://hp-api.onrender.com/api/characters/house/Ravenclaw")
   .then((resp) => {
@@ -121,14 +140,45 @@ fetch("https://hp-api.onrender.com/api/characters/house/Ravenclaw")
   })
 
   .then((data) => {
-    const data2 = data.slice(0,2);
+    const data2 = data.slice(0, 2);
 
     data2.forEach((e) => {
-        $ravenclaw.innerHTML += `
-        <div class="card">
-        <img src="${e.image}">
-        </div>
-        `;
+        const card = document.createElement("div");
+        card.classList.add("card");
+  
+        card.innerHTML += `
+          <div class="card-content">
+              <img src="${e.image}">
+          </div>
+          `;
+  
+        $ravenclaw.appendChild(card);
+      });
     });
-  });
 
+    // endpoint | personajes de Hogwarts Staff
+
+const $hogwarts = document.querySelector(".Hogwarts");
+
+fetch("https://hp-api.onrender.com/api/characters/staff")
+  .then((resp) => {
+    console.log(resp);
+    return resp.json();
+  })
+
+  .then((data) => {
+    const data8 = data.slice(0, 8);
+
+    data8.forEach((e) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+  
+        card.innerHTML += `
+          <div class="card-content">
+              <img src="${e.image}">
+          </div>
+          `;
+  
+        $hogwarts.appendChild(card);
+      });
+    });
