@@ -9,6 +9,6 @@ La API de Harry Potter es una interfaz de programación de aplicaciones que prop
 
 Repositorio GitHub: (blank:#https://github.com/elltete/projectEntregaModuloDos.git)
 
-Deploy: (blank:#https://torneo-de-golf.vercel.app)
+Deploy: (blank:#https://harry-potter-project-api.vercel.app)
 
 eMail: diegoponzo@gmail.com
