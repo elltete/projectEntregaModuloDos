@@ -120,3 +120,41 @@ footer {
   width: 100%;
   bottom: 0;
 }
+ 
+ @media (max-width: 880px) {
+    .grid, 
+    .personajes, 
+    .hechizos, 
+    .Gryffindor, 
+    .Slytherin, 
+    .Hufflepuff, 
+    .Ravenclaw,
+    .Hogwarts {
+       grid-template-columns: repeat(2, 1fr);
+    }
+ 
+    .tab-content-container {
+       flex-direction: column;
+    }
+ 
+    .tabs-section {
+       margin-bottom: 100px;
+    }
+ 
+    .text-content p {
+       max-width: 100%;
+    }
+ }
+ 
+ @media (max-width: 600px) {
+    .grid, 
+    .personajes, 
+    .hechizos, 
+    .Gryffindor, 
+    .Slytherin, 
+    .Hufflepuff, 
+    .Ravenclaw,
+    .Hogwarts {
+       grid-template-columns: 1fr;
+    }
+ }
